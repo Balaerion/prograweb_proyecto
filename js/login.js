@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 jQuery(document).on('submit', '#formLg', function (event) {
     event.preventDefault();
     jQuery.ajax({
@@ -28,3 +29,26 @@ jQuery(document).on('submit', '#formLg', function (event) {
         console.log("complete");
     });
 });
+=======
+jQuery(document).on('submit','#formlg', function(event){
+  event.preventDefault();
+  jQuery.ajax({
+    url: '../modelo/login2.php',
+    type: 'POST',
+    dataType: 'json',
+    data: $(this).serialize(),
+    beforeSend: function(){
+
+    }
+  })
+  .done(function(r){
+    console.log(r);
+  })
+  .fail(function(r2){
+    console.log(r2.responseText);
+  })
+  .always(function()){
+    console.log("completo");
+  }
+});
+>>>>>>> 5a280bef883bc3167b33a629a9c3131417ada277

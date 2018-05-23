@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
  class conexion{
     private $oConexion=null;
@@ -41,3 +42,11 @@
       }
 }
  ?>
+=======
+<?php
+$mysqli=new mysqli('localhost','root','','beza');
+if ($mysqli->connect_errno) {
+  echo "Error al conectarse con My SQL debido al error".$mysqli->connect_error;
+}
+ ?>
+>>>>>>> 5a280bef883bc3167b33a629a9c3131417ada277
